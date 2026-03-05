@@ -6,19 +6,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 1200px;  /* 加宽一点，给图片留空间 */
+            max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
             line-height: 1.6;
             color: #333;
         }
         
-        /* 头部区域：标题+照片放在同一行 */
         .header {
             display: flex;
             gap: 40px;
             margin-bottom: 40px;
-            align-items: center;  /* 垂直居中对齐 */
+            align-items: center;
         }
         
         .header-text {
@@ -26,14 +25,14 @@
         }
         
         .header-photo {
-            flex: 0 0 150px;  /* 固定宽度150px */
+            flex: 0 0 150px;
             text-align: center;
         }
         
         .header-photo img {
             width: 100%;
-            border-radius: 10px;  /* 圆角 */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* 阴影 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
         h1 {
@@ -64,10 +63,9 @@
             margin: 40px 0;
         }
         
-        /* 作品图片网格 */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* 自适应列数 */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
@@ -81,23 +79,19 @@
         }
         
         .gallery-item:hover {
-            transform: scale(1.02);  /* 鼠标悬停时轻微放大 */
+            transform: scale(1.02);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item a {
+            display: block;
         }
         
         .gallery-item img {
             width: 100%;
             height: 150px;
-            object-fit: cover;  /* 保持比例，裁剪多余部分 */
+            object-fit: cover;
             display: block;
-        }
-        
-        .gallery-item p {
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            background: #f9f9f9;
-            font-size: 14px;
         }
         
         .contact {
@@ -113,13 +107,12 @@
             padding: 2px 5px;
             border-radius: 3px;
             font-size: 14px;
-            word-break: break-all;  /* 长链接自动换行 */
+            word-break: break-all;
         }
     </style>
 </head>
 <body>
 
-    <!-- 头部：标题+照片 -->
     <div class="header">
         <div class="header-text">
             <h1>👋 你好，欢迎来到孙晓冉的主页</h1>
@@ -130,55 +123,55 @@
         </div>
     </div>
 
-    <!-- 作品集PDF部分 -->
     <h2>📄 作品集 PDF</h2>
     <p>
         <a href="孙晓冉作品集.pdf" target="_blank">👉 点击这里查看/下载我的作品集</a>
     </p>
+    <p>或者复制链接直接访问：<br>
+    <code>https://github.com/Sharon1006/portfolio/blob/main/孙晓冉作品集.pdf</code>
+    </p>
 
-    <!-- 策划案展示 -->
-    <h2>🖼️ 纳爱斯全案策划展示（共35张）</h2>
+    <h2>🖼️ 作品图片展示（共35张）</h2>
     
     <div class="gallery">
-        <!-- 这里会自动生成图片1-35，你上传后就会显示 -->
-        <div class="gallery-item"><img loading="lazy" src="1.jpg" alt="作品1"></div>
-        <div class="gallery-item"><img loading="lazy" src="2.jpg" alt="作品2"></div>
-        <div class="gallery-item"><img loading="lazy" src="3.jpg" alt="作品3"></div>
-        <div class="gallery-item"><img loading="lazy" src="4.jpg" alt="作品4"></div>
-        <div class="gallery-item"><img loading="lazy" src="5.jpg" alt="作品5"></div>
-        <div class="gallery-item"><img loading="lazy" src="6.jpg" alt="作品6"></div>
-        <div class="gallery-item"><img loading="lazy" src="7.jpg" alt="作品7"></div>
-        <div class="gallery-item"><img loading="lazy" src="8.jpg" alt="作品8"></div>
-        <div class="gallery-item"><img loading="lazy" src="9.jpg" alt="作品9"></div>
-        <div class="gallery-item"><img loading="lazy" src="10.jpg" alt="作品10"></div>
-        <div class="gallery-item"><img loading="lazy" src="11.jpg" alt="作品11"></div>
-        <div class="gallery-item"><img loading="lazy" src="12.jpg" alt="作品12"></div>
-        <div class="gallery-item"><img loading="lazy" src="13.jpg" alt="作品13"></div>
-        <div class="gallery-item"><img loading="lazy" src="14.jpg" alt="作品14"></div>
-        <div class="gallery-item"><img loading="lazy" src="15.jpg" alt="作品15"></div>
-        <div class="gallery-item"><img loading="lazy" src="16.jpg" alt="作品16"></div>
-        <div class="gallery-item"><img loading="lazy" src="17.jpg" alt="作品17"></div>
-        <div class="gallery-item"><img loading="lazy" src="18.jpg" alt="作品18"></div>
-        <div class="gallery-item"><img loading="lazy" src="19.jpg" alt="作品19"></div>
-        <div class="gallery-item"><img loading="lazy" src="20.jpg" alt="作品20"></div>
-        <div class="gallery-item"><img loading="lazy" src="21.jpg" alt="作品21"></div>
-        <div class="gallery-item"><img loading="lazy" src="22.jpg" alt="作品22"></div>
-        <div class="gallery-item"><img loading="lazy" src="23.jpg" alt="作品23"></div>
-        <div class="gallery-item"><img loading="lazy" src="24.jpg" alt="作品24"></div>
-        <div class="gallery-item"><img loading="lazy" src="25.jpg" alt="作品25"></div>
-        <div class="gallery-item"><img loading="lazy" src="26.jpg" alt="作品26"></div>
-        <div class="gallery-item"><img loading="lazy" src="27.jpg" alt="作品27"></div>
-        <div class="gallery-item"><img loading="lazy" src="28.jpg" alt="作品28"></div>
-        <div class="gallery-item"><img loading="lazy" src="29.jpg" alt="作品29"></div>
-        <div class="gallery-item"><img loading="lazy" src="30.jpg" alt="作品30"></div>
-        <div class="gallery-item"><img loading="lazy" src="31.jpg" alt="作品31"></div>
-        <div class="gallery-item"><img loading="lazy" src="32.jpg" alt="作品32"></div>
-        <div class="gallery-item"><img loading="lazy" src="33.jpg" alt="作品33"></div>
-        <div class="gallery-item"><img loading="lazy" src="34.jpg" alt="作品34"></div>
-        <div class="gallery-item"><img loading="lazy" src="35.jpg" alt="作品35"></div>
+        <!-- 作品1-35：点击打开原图，页面显示缩略图 -->
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/1.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/1.jpg" alt="作品1"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/2.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/2.jpg" alt="作品2"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/3.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/3.jpg" alt="作品3"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/4.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/4.jpg" alt="作品4"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/5.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/5.jpg" alt="作品5"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/6.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/6.jpg" alt="作品6"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/7.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/7.jpg" alt="作品7"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/8.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/8.jpg" alt="作品8"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/9.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/9.jpg" alt="作品9"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/10.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/10.jpg" alt="作品10"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/11.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/11.jpg" alt="作品11"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/12.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/12.jpg" alt="作品12"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/13.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/13.jpg" alt="作品13"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/14.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/14.jpg" alt="作品14"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/15.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/15.jpg" alt="作品15"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/16.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/16.jpg" alt="作品16"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/17.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/17.jpg" alt="作品17"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/18.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/18.jpg" alt="作品18"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/19.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/19.jpg" alt="作品19"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/20.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/20.jpg" alt="作品20"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/21.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/21.jpg" alt="作品21"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/22.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/22.jpg" alt="作品22"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/23.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/23.jpg" alt="作品23"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/24.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/24.jpg" alt="作品24"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/25.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/25.jpg" alt="作品25"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/26.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/26.jpg" alt="作品26"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/27.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/27.jpg" alt="作品27"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/28.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/28.jpg" alt="作品28"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/29.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/29.jpg" alt="作品29"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/30.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/30.jpg" alt="作品30"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/31.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/31.jpg" alt="作品31"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/32.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/32.jpg" alt="作品32"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/33.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/33.jpg" alt="作品33"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/34.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/34.jpg" alt="作品34"></a></div>
+        <div class="gallery-item"><a href="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/35.jpg" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Sharon1006/portfolio/thumb/35.jpg" alt="作品35"></a></div>
     </div>
 
-    <!-- 联系方式 -->
     <div class="contact">
         <p>📧 联系方式：15932371482@163.com</p>
         <p style="font-size: 14px; color: #777;">感谢访问 | 作品持续更新中</p>
