@@ -2,24 +2,187 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>我的作品集</title>
+    <title>孙晓冉的作品集</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;  /* 加宽一点，给图片留空间 */
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 头部区域：标题+照片放在同一行 */
+        .header {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: center;  /* 垂直居中对齐 */
+        }
+        
+        .header-text {
+            flex: 2;
+        }
+        
+        .header-photo {
+            flex: 0 0 150px;  /* 固定宽度150px */
+            text-align: center;
+        }
+        
+        .header-photo img {
+            width: 100%;
+            border-radius: 10px;  /* 圆角 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* 阴影 */
+        }
+        
+        h1 {
+            color: #e74c3c;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-top: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #ccc, transparent);
+            margin: 40px 0;
+        }
+        
+        /* 作品图片网格 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* 自适应列数 */
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);  /* 鼠标悬停时轻微放大 */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;  /* 保持比例，裁剪多余部分 */
+            display: block;
+        }
+        
+        .gallery-item p {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            background: #f9f9f9;
+            font-size: 14px;
+        }
+        
+        .contact {
+            margin-top: 50px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 14px;
+            word-break: break-all;  /* 长链接自动换行 */
+        }
     </style>
 </head>
 <body>
-    <h1>👋 你好，这是我的作品集</h1>
-    <p>我是广告学应届生，正在求职中。</p>
-    
+
+    <!-- 头部：标题+照片 -->
+    <div class="header">
+        <div class="header-text">
+            <h1>👋 你好，欢迎来到孙晓冉的主页</h1>
+            <p style="font-size: 18px; color: #555;">河北大学 广告学 26届毕业生</p>
+        </div>
+        <div class="header-photo">
+            <img src="photo.jpg" alt="孙晓冉的证件照">
+        </div>
+    </div>
+
+    <!-- 作品集PDF部分 -->
     <h2>📄 作品集 PDF</h2>
-    <p><a href="孙晓冉作品集.pdf" target="_blank">点击这里查看/下载我的作品集</a></p>
+    <p>
+        <a href="孙晓冉作品集.pdf" target="_blank">👉 点击这里查看/下载我的作品集</a>
+    </p>
+
+    <!-- 策划案展示 -->
+    <h2>🖼️ 纳爱斯全案策划展示（共35张）</h2>
     
-    <p>或者复制链接直接访问：<br>
-    <code>https://github.com/Sharon1006/portfolio/blob/main/孙晓冉作品集.pdf</code></p>
-    
-    <hr>
-    <p>📧 联系方式：15932371482@163.com</p>
+    <div class="gallery">
+        <!-- 这里会自动生成图片1-35，你上传后就会显示 -->
+        <div class="gallery-item"><img src="1.jpg" alt="作品1"><p>作品 1</p></div>
+        <div class="gallery-item"><img src="2.jpg" alt="作品2"><p>作品 2</p></div>
+        <div class="gallery-item"><img src="3.jpg" alt="作品3"><p>作品 3</p></div>
+        <div class="gallery-item"><img src="4.jpg" alt="作品4"><p>作品 4</p></div>
+        <div class="gallery-item"><img src="5.jpg" alt="作品5"><p>作品 5</p></div>
+        <div class="gallery-item"><img src="6.jpg" alt="作品6"><p>作品 6</p></div>
+        <div class="gallery-item"><img src="7.jpg" alt="作品7"><p>作品 7</p></div>
+        <div class="gallery-item"><img src="8.jpg" alt="作品8"><p>作品 8</p></div>
+        <div class="gallery-item"><img src="9.jpg" alt="作品9"><p>作品 9</p></div>
+        <div class="gallery-item"><img src="10.jpg" alt="作品10"><p>作品 10</p></div>
+        <div class="gallery-item"><img src="11.jpg" alt="作品11"><p>作品 11</p></div>
+        <div class="gallery-item"><img src="12.jpg" alt="作品12"><p>作品 12</p></div>
+        <div class="gallery-item"><img src="13.jpg" alt="作品13"><p>作品 13</p></div>
+        <div class="gallery-item"><img src="14.jpg" alt="作品14"><p>作品 14</p></div>
+        <div class="gallery-item"><img src="15.jpg" alt="作品15"><p>作品 15</p></div>
+        <div class="gallery-item"><img src="16.jpg" alt="作品16"><p>作品 16</p></div>
+        <div class="gallery-item"><img src="17.jpg" alt="作品17"><p>作品 17</p></div>
+        <div class="gallery-item"><img src="18.jpg" alt="作品18"><p>作品 18</p></div>
+        <div class="gallery-item"><img src="19.jpg" alt="作品19"><p>作品 19</p></div>
+        <div class="gallery-item"><img src="20.jpg" alt="作品20"><p>作品 20</p></div>
+        <div class="gallery-item"><img src="21.jpg" alt="作品21"><p>作品 21</p></div>
+        <div class="gallery-item"><img src="22.jpg" alt="作品22"><p>作品 22</p></div>
+        <div class="gallery-item"><img src="23.jpg" alt="作品23"><p>作品 23</p></div>
+        <div class="gallery-item"><img src="24.jpg" alt="作品24"><p>作品 24</p></div>
+        <div class="gallery-item"><img src="25.jpg" alt="作品25"><p>作品 25</p></div>
+        <div class="gallery-item"><img src="26.jpg" alt="作品26"><p>作品 26</p></div>
+        <div class="gallery-item"><img src="27.jpg" alt="作品27"><p>作品 27</p></div>
+        <div class="gallery-item"><img src="28.jpg" alt="作品28"><p>作品 28</p></div>
+        <div class="gallery-item"><img src="29.jpg" alt="作品29"><p>作品 29</p></div>
+        <div class="gallery-item"><img src="30.jpg" alt="作品30"><p>作品 30</p></div>
+        <div class="gallery-item"><img src="31.jpg" alt="作品31"><p>作品 31</p></div>
+        <div class="gallery-item"><img src="32.jpg" alt="作品32"><p>作品 32</p></div>
+        <div class="gallery-item"><img src="33.jpg" alt="作品33"><p>作品 33</p></div>
+        <div class="gallery-item"><img src="34.jpg" alt="作品34"><p>作品 34</p></div>
+        <div class="gallery-item"><img src="35.jpg" alt="作品35"><p>作品 35</p></div>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="contact">
+        <p>📧 联系方式：15932371482@163.com</p>
+        <p style="font-size: 14px; color: #777;">感谢访问 | 作品持续更新中</p>
+    </div>
+
 </body>
 </html>
